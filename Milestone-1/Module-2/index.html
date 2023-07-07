@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Basics</title>
+    <!--Internal CSS-->
+    <style>
+        h1 {
+            color: rgba(7, 70, 165, 0.89);
+            background-color: rgba(210, 105, 30, 0.514);
+        }
+        h2 {
+            list-style: lower-greek;
+            font-weight: 900;
+            color: blueviolet;
+        }
+    </style>
+    <!--External Style Sheet-->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--Inline Style-->
+    <h1 style="color: brown;">Cascading Style Sheet - CSS</h1>
+        <div>
+            <h2>Can use CSS in 3 ways</h2>
+            <li>Inline Style</li>
+            <li>Internal/Embeded Style</li>
+            <li>External Style Sheet</li>
+        </div>
+    
+    <div>
+        <h1>CSS Selectors</h1>
+        <li>Element Selector (Tag)</li>
+        <li class="class">Class Selector (.)</li>
+        <li id="id">ID Selector (#)</li>
+        <li>Universal Selector (*)</li>
+        <li>Attribute Selector ([])</li>
+    </div>    
+    <div>
+        <h1>Multi-Selector with Box Moder (Margin, Border, Padding, Content, and Height & Width)</h1>
+        <p class="class margin">Lorem ipsum dolor sit consectetur adipisicing elit. Distinctio quidem natus tempora itaque minus quos eaque necessitatibus pariatur commodi quam.</p>
+        <p class="border">Quidem reiciendis, explicabo accusantium laudantium nam ea recusandae. Tempora consequatur blanditiis dicta quidem et temporibus necessitatibus sit, dolore unde voluptatum.</p>
+        <p class="class border">Ab alias quae mollitia atque molestias omnis est. Nisi illo dolorem consequatur porro nobis earum magnam. Magni odit quasi officiis.</p>
+        <p class="margin"><a href="www.google.com" target="_blank">Attribute</a> Est rerum enim, dicta praesentium sed, ipsum recusandae vel excepturi deleniti magnam ad sequi architecto soluta facere totam expedita alias.</p>
+    </div>
+</body>
+</html>

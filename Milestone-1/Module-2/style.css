@@ -1,0 +1,33 @@
+* {
+    background-color: rgba(179, 129, 226, 0.041);
+}
+
+li {
+    color: blueviolet;
+}
+
+.class {
+    color: brown;
+    font-size: x-large;
+}
+
+#id {
+    color: chartreuse;
+    font-size: xx-large;
+    font-weight: 700;
+}
+
+p.class.border {
+    text-align: right;
+}
+
+li, .class {
+    text-align: center;
+}
+
+a[target="_blank"] {
+    font-size: xx-large;
+    text-decoration: none;
+}
+
+  

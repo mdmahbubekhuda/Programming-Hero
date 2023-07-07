@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Basics</title>
+    <link rel="shortcut icon" href="Images/html-5.png" type="image/x-icon">
+</head>
+<body>
+    <h1>HTML==> Hypertext markup language</h1>
+    <h2>Title: In head placing favicon using <u>link</u> tag</h2>
+    <div>
+        <h2>Tags ==> Inline Tag & Block Tag</h2>
+        <p><strong>strong</strong> and <em>em</em> tags are used to emphasize the text and are called semantic(meaningful) tag</p>
+        <p>Lorem ipsum, dolor sit amet <b>consectetur</b> adipisicing elit. Quam <i>autem</i> voluptate ducimus <u>voluptates!</u> <small>Architecto</small> voluptatum <br>br tag to display line break; where there is no end tag <br>debitis odit recusandae dicta natus!</p>
+    </div>
+
+    <div>
+        <h2>Block/Container tags ==> List (li, ol, ul); Division (div)</h2>
+        
+        <h3>List item ==> li</h3>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+        
+        <ol type="a"><h3>Ordered List ==> ol</h3>
+            <li>Lorem ipsum dolor sit amet.</li>
+            <li>Lorem ipsum dolor sit amet.</li>
+            <li>Lorem ipsum dolor sit amet.</li>
+        </ol>
+
+        <ul type="circle"><h3>Unordered List ==> ul</h3>
+            <li>Lorem ipsum dolor sit amet.</li>
+            <li>Lorem ipsum dolor sit amet.</li>
+            <li>Lorem ipsum dolor sit amet.</li>
+        </ul>
+        
+        <ol type="A"><h3>Nested lists</h3>
+            <li>Lorem, ipsum dolor.</li>
+            <ul type="square">
+                <li>Lorem.</li>
+                <li>Lorem.</li>
+            </ul>
+            <li>Lorem, ipsum dolor.</li>
+        </ol>
+    </div>
+
+    <div>
+        <h2>Hyperlink ==> anchor tag</h2>
+        <ol><b>Hyper refference <br>Note use <i>ctrl+l</i> to copy full web address for hyper refference</b>
+            <li><a href="https://www.google.com/" target="_blank">Google</a></li>
+            <!-- Here href is used to specify file location and download attribute is used to download the file and the passed in download attribute is the desired name of the downloaded file-->
+            <li><a href="Images/sanjeevan-satheeskumar-MG8c-4n1QVE-unsplash.jpg" download="Beautiful Picture">Download Image</a></li>
+        </ol>
+    </div>
+
+    <div>
+        <h2>Image</h2>
+        <p>
+            <b>Void tag: no closig tag; such as <img> or <br></b>
+            <b>self-closing: such as <img/></b><br>
+            
+            <h3>Local image</h3>
+            <img src="Images/mohamed-nohassi-odxB5oIG_iA-unsplash.jpg" alt="Local" height="100vh" width="100vw">
+            
+            <h3>Online image</h3>
+            <img src="https://media.istockphoto.com/id/1403020167/photo/close-up-shot-of-hands-removing-cuffs-from-hand-on-black-dark-background-concept-of-freedom.jpg?s=1024x1024&w=is&k=20&c=bUonNYiAxnT1QoEkWL1MJAjtaNI85gBkvUbszT9wzc8=" alt="Online" height="100vh" width="100vw">
+        </p>
+    </div>
+
+    <div>
+        <h2>Form; Input: button, select, option, placeholder</h2>
+        <form action="">
+            <input type="text" placeholder="Your Name" id=""><br><br>
+            <input type="password" placeholder="Your Password" id=""><br><br>
+            <input type="button" value="Login"><br><br>
+            <input type="radio" name="" id="">Employee <br><br>
+            <input type="radio" name="" id="">Visitor <br><br>
+            <input type="checkbox" name="" id=""> Accept terms and conditions
+        </form>
+    </div>
+
+</body>
+</html>
