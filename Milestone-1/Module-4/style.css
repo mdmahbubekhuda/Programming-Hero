@@ -1,0 +1,30 @@
+/* Nav Bar */
+nav>li {
+    font-size: 1rem;
+    display: inline;
+    list-style: none;
+    border: 0.5em solid brown;
+    margin: 0.5em;
+    padding: 0.5em;
+}
+
+nav li>a {
+    text-decoration: none;
+    color: rgb(37, 39, 38);
+}
+
+section,
+nav {
+    margin: 2rem 1rem;
+}
+
+footer {
+    text-align: center;
+}
+
+/* Form */
+
+label {
+    display: block;
+    margin-bottom: 1rem;
+}

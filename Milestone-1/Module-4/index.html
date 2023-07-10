@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <!-- HTML5 Semantic Tags -->
+        <!-- Navigation -->
+        <nav>
+            <li><a href="">Home</a></li>
+            <li><a href="">Blog</a></li>
+            <li><a href="">AboutUs</a></li>
+            <li><a href="">Login</a></li>
+        </nav>
+    </header>
+    <main>
+        <article>
+            <!-- Figure Tag for images -->
+            <section>
+                <figure>
+                    <img width="50%" src="../Assets/Media/Images/mohamed-nohassi-odxB5oIG_iA-unsplash.jpg"
+                        alt="Sky reflecting on water">
+                    <figcaption>Reflection</figcaption>
+                </figure>
+            </section>
+            <!-- Audio -->
+            <section>
+                <audio controls src="../Assets/Media/Audio/Audio-1.mp3"></audio>
+            </section>
+            <!-- Video -->
+            <section>
+                <video width="240px" controls src="../Assets/Media/Video/Video-2.mp4"></video>
+            <!-- Alternate Video more cleaner -->
+                <video controls width="200px">
+                    <source src="../Assets/Media/Video/Video-2.mp4">
+                </video>
+            </section>
+            <!-- Embed-Iframe / YouTube -->
+            <section>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/zNXMkjp2Sv8"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+            </section>
+        </article>
+        <!-- Form -->
+        <section>
+            <h2>Please fill up the form</h2>
+            <form>
+                <label for="name"> Your Name :
+                    <input id="name" type="text" placeholder="Name">
+                </label>
+                <label for="email">Your Email :
+                    <input type="email" name="" id="email" placeholder="example@email.com">
+                </label>
+                <label for="phone">Your Phone Number :
+                    <input type="text" name="" id="phone" placeholder="+880 xxx xxx xxx">
+                </label>
+                <!-- Radio -->
+                <fieldset>
+                    <legend>Your Sex</legend>
+                    <label for="male">
+                        <input type="radio" name="gender" id="male">Male
+                    </label>
+                    <label for="female">
+                        <input type="radio" name="gender" id="female">Female
+                    </label>
+                </fieldset>
+                <!-- Check box -->
+                <fieldset>
+                    <legend>Your favorite media</legend>
+                    <label for="audio">
+                        <input type="checkbox" name="music" id="audio">Audio
+                    </label>
+                    <label for="video"><input type="checkbox" name="music" id="video">Video
+                    </label>
+                    <label for="youtube"><input type="checkbox" name="music" id="youtube">YouTube
+                    </label>
+                </fieldset>
+                <!-- Text area -->
+                <fieldset>
+                    <legend>Comment</legend>
+                    <textarea name="comment" id="userReview" cols="20" rows="5"></textarea>
+                </fieldset>
+                <input type="reset" value="Reset">
+                <input type="submit" value="Submit">
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p><small>&copy; 2023. All rights reserved.</small></p>
+    </footer>
+</body>
+
+</html>
