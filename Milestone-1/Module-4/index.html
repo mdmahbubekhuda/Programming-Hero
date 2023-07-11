@@ -13,10 +13,24 @@
         <!-- HTML5 Semantic Tags -->
         <!-- Navigation -->
         <nav>
-            <li><a href="">Home</a></li>
-            <li><a href="">Blog</a></li>
-            <li><a href="">AboutUs</a></li>
-            <li><a href="">Login</a></li>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Blog</a></li>
+                <li><a href="">AboutUs</a>
+                    <ul class="dropDown">
+                        <li><a href="">Home</a></li>
+                        <li><a href="">Blog</a></li>
+                        <li><a href="">AboutUs</a></li>
+                        <li><a href="">Login</a>
+                            <ul class="dropDown">
+                                <li><a href="">Existing User</a></li>
+                                <li><a href="">New User</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="">Login</a></li>
+            </ul>
         </nav>
     </header>
     <main>
@@ -36,7 +50,7 @@
             <!-- Video -->
             <section>
                 <video width="240px" controls src="../Assets/Media/Video/Video-2.mp4"></video>
-            <!-- Alternate Video more cleaner -->
+                <!-- Alternate Video more cleaner -->
                 <video controls width="200px">
                     <source src="../Assets/Media/Video/Video-2.mp4">
                 </video>
@@ -49,6 +63,7 @@
                     allowfullscreen></iframe>
             </section>
         </article>
+
         <!-- Form -->
         <section>
             <h2>Please fill up the form</h2>
@@ -91,6 +106,65 @@
                 <input type="reset" value="Reset">
                 <input type="submit" value="Submit">
             </form>
+        </section>
+
+        <!-- Table -->
+        <section>
+            <h2>Table</h2>
+            <ol>
+                <li>Table: table</li>
+                <li>Table Caption: caption</li>
+                <li>Table Head: thead</li>
+                <li>Table Header Cell: th</li>
+                <li>Table Body: tbody</li>
+                <li>Table Row: tr</li>
+                <li>Table Data: td</li>
+                <li>Table Footer: tfoot</li>
+                <li>To span colums: colspan</li>
+
+            </ol>
+            <table>
+                <caption>Emplyee Salary Data</caption>
+                <thead>
+                    <tr>
+                        <th>No.</th>
+                        <th>Name</th>
+                        <th>Company</th>
+                        <th>Salary</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Bill</td>
+                        <td>Microsoft</td>
+                        <td>$1000</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Steve</td>
+                        <td>Apple</td>
+                        <td>&1200</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Larry</td>
+                        <td>Google</td>
+                        <td>$1100</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Mark</td>
+                        <td>Facebook</td>
+                        <td>$1300</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="4">Total Employees : 4</td>
+                    </tr>
+                </tfoot>
+            </table>
         </section>
     </main>
     <footer>
