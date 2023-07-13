@@ -1,0 +1,96 @@
+h1:hover {
+    color: blueviolet;
+    background-color: brown;
+}
+
+input:focus {
+    color: blueviolet;
+    /* padding-left: 15px; */
+    outline: 0;
+    border: 2px solid palegreen;
+}
+
+a:visited {
+    color: grey;
+}
+
+/* li:first-child {
+    color: tomato;
+}
+li:last-child{
+    color: aqua;
+} */
+/* selecting all even numbers */
+li:nth-child(2n) {
+    color: yellowgreen;
+}
+
+/* selecting all odd numbers */
+li:nth-child(2n+1) {
+    color: brown;
+}
+
+/* Pseudo-Element */
+.pseudo-element>h1::after {
+    content: ' added content';
+    color: brown;
+    font-size: 0.5em;
+    background-color: blanchedalmond;
+}
+
+.pseudo-element>h1::before {
+    content: 'before';
+}
+
+.pseudo-element>p::first-letter {
+    font-size: 2em;
+}
+
+.pseudo-element>p::first-line {
+    background-color: aquamarine;
+}
+
+::selection {
+    background-color: yellow;
+}
+
+input::placeholder {
+    color: violet;
+}
+
+/* Position */
+.container{
+    height: 300px;
+    width: 300px;
+    border: 5px solid rgb(26, 25, 25);
+    display: flex;
+    position: relative;
+}
+
+.color-1{
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    position: absolute;
+    top: -30px;
+    left: -10px;
+    z-index: 1;
+}
+.color-2{
+    height: 100px;
+    width: 100px;
+    background-color: green;
+    position: fixed;
+    top: 450px;
+    left: 50px;
+    z-index: 2;
+}
+.color-3{
+    height: 100px;
+    width: 100px;
+    background-color: blue;
+    position: sticky;
+    top: 50px;
+    z-index: 3;
+    
+}
