@@ -1,0 +1,31 @@
+h1 {
+    color: rgb(231, 128, 128);
+    font-size: 2rem;
+}
+
+.flex-container {
+    height: 20vmax;
+    width: 80vmax;
+    border: 2px solid turquoise;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0 auto;
+    /* flex-wrap: nowrap; */
+}
+
+.flex-content {
+    border: 1px solid tomato;
+    height: 80%;
+    width: 30%;
+    text-align: center;
+}
+
+.flex-content>img {
+    height: 55%;
+    width: auto;
+}
+
+.flex-content>p {
+    text-align: justify;
+}
