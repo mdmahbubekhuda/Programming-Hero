@@ -1,28 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsive Layout</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+    <header>
+        <nav>
+            <div>
+                <a href="">Home</a>
+                <a href="">Profile</a>
+                <a href="">Blog</a>
+            </div>
+            <div>
+                <a href="">About</a>
+                <a href="">Login</a>
+            </div>
+        </nav>
+        <section class="login-form-container">
+            <form class="login-form">
+                <h1>Login</h1>
+                <input type="email" name="" id="" placeholder="email@example.com" required>
+                <input type="password" name="" id="" placeholder="Password" required>
+                <input type="submit" value="Login">
+            </form>
+        </section>
+    </header>
     <section>
         <h1>Flexbox</h1>
         <div class="flex-container">
             <div class="flex-content">
                 <img class="img" src="../../Milestone-1/Assets/Media/Images/html-5.png" alt="">
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum commodi ipsa voluptatibus quam dolore reiciendis voluptas explicabo odio eveniet magnam.</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum commodi ipsa voluptatibus quam dolore
+                    reiciendis voluptas explicabo odio eveniet magnam.</p>
             </div>
             <div class="flex-content">
                 <img src="../../Milestone-1/Assets/Media/Images/mohamed-nohassi-odxB5oIG_iA-unsplash.jpg" alt="">
-                <p>Quo, sequi dolorem nesciunt amet eaque quos debitis explicabo consequuntur magnam exercitationem illum totam vitae suscipit ad adipisci deleniti minima!</p>
+                <p>Quo, sequi dolorem nesciunt amet eaque quos debitis explicabo consequuntur magnam exercitationem
+                    illum totam vitae suscipit ad adipisci deleniti minima!</p>
             </div>
             <div class="flex-content">
                 <img src="../../Milestone-1/Assets/Media/Images/sanjeevan-satheeskumar-MG8c-4n1QVE-unsplash.jpg" alt="">
-                <p>Delectus explicabo ipsam modi aspernatur accusantium vero, illum impedit. Sint iusto sequi quidem ea sed veritatis molestiae placeat, culpa totam?</p>
+                <p>Delectus explicabo ipsam modi aspernatur accusantium vero, illum impedit. Sint iusto sequi quidem ea
+                    sed veritatis molestiae placeat, culpa totam?</p>
+            </div>
+        </div>
+    </section>
+    <section>
+        <h1>CSS Grid</h1>
+        <div class="grid-container">
+            <div class="grid-item-1">Box - 1</div>
+            <div class="grid-item-2">Box - 2</div>
+            <div class="grid-item-3">Box - 3</div>
+            <div class="grid-item-4">Box - 4</div>
+        </div>
+    </section>
+    <section>
+        <h1>Media Query</h1>
+        <div class="img-container">
+            <div class="cart">
+                <img src="/Milestone-1/Assets/Media/Images/sanjeevan-satheeskumar-MG8c-4n1QVE-unsplash.jpg" alt="">
+            </div>
+            <div class="cart">
+                <img src="/Milestone-1/Assets/Media/Images/sanjeevan-satheeskumar-MG8c-4n1QVE-unsplash.jpg" alt="">
+            </div>
+            <div class="cart">
+                <img src="/Milestone-1/Assets/Media/Images/sanjeevan-satheeskumar-MG8c-4n1QVE-unsplash.jpg" alt="">
             </div>
         </div>
     </section>
 </body>
+
 </html>
