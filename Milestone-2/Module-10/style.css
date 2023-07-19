@@ -2,6 +2,43 @@ body {
     margin-left: 20px;
 }
 
+/* custom property & calc() function */
+:root {
+    --primary-color: steelblue;
+    --secondary-color: greenyellow;
+    --font-size: 2rem;
+}
+
+h1 {
+    color: var(--primary-color);
+    font-size: var(--font-size);
+}
+
+h5 {
+    background-color: var(--primary-color);
+}
+
+.var-box {
+    border: 2px solid var(--primary-color);
+    width: calc(100% - 200px);
+}
+
+.var p {
+    color: var(--secondary-color);
+}
+/* calc() use */
+.container{
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 200px calc(100% - 200px - 20px);
+}
+.sidebar{
+    background-color: lightpink;
+}
+.content{
+    background-color: lightskyblue;
+}
+
 /* animation */
 
 @keyframes ping-pong {
@@ -55,9 +92,13 @@ body {
     border-radius: 50%;
     /* position relative must to make the ball move */
     position: relative;
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
     /* animation: ping-pong 3s ease-in-out 1s infinite alternate; */
     animation: bounce 10s ease-in-out 1s infinite alternate;
 }
+/* animation-play-state & animation-fill-mode*/
+/* play-state is used to pause & resume animation */
+/* fill-mode is used to define what happens when animation is not played */
 
 /* transform */
 .outter {
@@ -88,6 +129,7 @@ property name | duration | easing function | delay */
 .inner {
     background-color: aqua;
     /* transition: transform 3s ease-in-out 1s; */
+    /* transition: transform,opacity 3s ease-in-out; */
     transition: all 3s ease-in-out;
 }
 
@@ -95,6 +137,7 @@ property name | duration | easing function | delay */
 .outter:hover .inner {
     transform: scale(1.2) translate(3rem);
     background-color: blueviolet;
+    opacity: 0.2;
 }
 
 
