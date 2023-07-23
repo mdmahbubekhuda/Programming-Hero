@@ -13,6 +13,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap"
         rel="stylesheet">
 
+    <!-- taiwind-custom-styles -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        'primary-color': '#E76F51',
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- custom-styles -->
     <style>
         .font-poppins {
             font-family: 'Poppins', sans-serif;
@@ -21,11 +35,11 @@
 </head>
 
 <body class="font-poppins">
-    <header>
+    <header class="container mx-auto">
         <!-- navigation -->
         <nav>
             <div class="navbar bg-base-100">
-                <div class="navbar-start">
+                <div class="flex-1">
                     <div class="dropdown">
                         <label tabindex="0" class="btn btn-ghost lg:hidden">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
@@ -35,34 +49,32 @@
                             </svg>
                         </label>
                         <ul tabindex="0"
-                            class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                            class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 text-base">
                             <li><a>Home</a></li>
                             <li><a>Shop</a></li>
                             <li><a>News</a></li>
                             <li><a>Contact</a></li>
                         </ul>
                     </div>
-                    <a class="btn btn-ghost normal-case text-xl">Bike Dekho</a>
+                    <a class="btn btn-ghost normal-case text-4xl">Bike Zone</a>
                 </div>
                 <div class="navbar-center hidden lg:flex">
-                    <ul class="menu menu-horizontal px-1">
+                    <ul class="menu menu-horizontal px-1 text-base">
                         <li><a>Home</a></li>
                         <li><a>Shop</a></li>
                         <li><a>News</a></li>
                         <li><a>Contact</a></li>
                     </ul>
                 </div>
-                <div class="navbar-end">
-                    <a class="btn btn-secondary rounded-none bg-[#E76F51]">Login</a>
+                <div class="">
+                    <a class="btn btn-secondary rounded-none bg-primary-color text-white">Login</a>
                 </div>
             </div>
         </nav>
     </header>
-    <main>
-
+    <main class="container mx-auto">
     </main>
     <footer>
-
     </footer>
 </body>
 
