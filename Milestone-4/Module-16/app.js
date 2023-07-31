@@ -92,7 +92,9 @@ let totalMarks = mathmatics + biology + chemistry + physics + bangla;
 let numberOfSubjects = 5;
 let average = totalMarks / numberOfSubjects;
 average = average.toFixed(2);
+average = parseFloat(average);
 
+// console.log(typeof average);
 console.log(average);
 
 // practice problem-3
