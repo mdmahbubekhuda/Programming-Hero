@@ -39,7 +39,13 @@ let shoppingCart = {
     pen: 25,
 };
 
+let keys = Object.keys(shoppingCart);
 
+for (let i = 0; i < keys.length; i++) {
+    let propertyName = keys[i];
+    let propertyValue = shoppingCart[propertyName]
+    console.log(propertyName, propertyValue);
+}
 
 
 
