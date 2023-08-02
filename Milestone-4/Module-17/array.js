@@ -36,6 +36,20 @@ console.log('Removes the last element in array: ' +  friendsName);
 let poppedElement = friendsName.pop();
 console.log('lopa is stored in a variable called poppedElement: ' + poppedElement);
 
+// array slice
+let number = [0, 1, 2, 3, 4, 5];
+let firstPartOfNumber = number.slice(0, 5);
+console.log(firstPartOfNumber);
+
+// string includes of
+let x = 'hello world';
+console.log(x.includes('world'));
+console.log(x.includes('has'));
+
+// sub string
+let y = x.substring(0, 4);
+console.log(y);
+
 
 
 
