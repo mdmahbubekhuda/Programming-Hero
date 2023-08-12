@@ -3,16 +3,13 @@ console.log('hello world!');
 
 // getElementsByTagName() - returns HTML collection (array like object)
 console.log(document.getElementsByTagName('h1'));
-
 // getElementById() - returns element
 console.log(document.getElementById('get-id'));
-
 // getElementByClass() - returns HTMLCollection (array like object)
 console.log(document.getElementsByClassName('get-class'));
 
 // get query like css selector - returns one element
 console.log(document.querySelector('nav li'));
-
 // get query like css selector - returns all elements in nodeList
 console.log(document.querySelectorAll('#nav-id .li-class'));
 
@@ -35,9 +32,13 @@ console.log(titleAttribute.classList);
 titleAttribute.classList.remove('random-class');
 console.log(titleAttribute.classList);
 
+// get innerText - gets the texts
+console.log(document.getElementById('get-id').innerText);
+// set innerText 
+document.getElementById('get-id').innerText = 'Added by javaScript';
+
 // get innerHTML - returns HTML elements
 console.log(document.getElementById('nav-id').innerHTML);
-
 // set innerHTML - removes previous HTML elements and set new elements
 document.getElementById('innerHTML-id').innerHTML = `
 <h2>Set by innerHTML</h2>
@@ -45,13 +46,17 @@ document.getElementById('innerHTML-id').innerHTML = `
   <li>javaScript</li>
   <li>javaScript</li>
   <li>javaScript</li>
-  <li>javaScript</li>
-  <li>javaScript</li>
 </ul>
 `;
 
-// get innerText - gets the texts
-console.log(document.getElementById('get-id').innerText);
 
-// set innerText 
-document.getElementById('get-id').innerText='Added by javaScript';
+// parent-child-sibling 
+const getElement = document.getElementById('nav-id');
+console.log(getElement);
+// parent element/node(parentNode)
+console.log(getElement.parentElement);
+// child element/node(childNode) 
+console.log(getElement.children);
+// sibling element/node
+console.log(getElement.nextElementSibling);
+console.log(getElement.previousElementSibling);
