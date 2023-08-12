@@ -2,19 +2,56 @@
 console.log('hello world!');
 
 // getElementsByTagName() - returns HTML collection (array like object)
-const getTag = document.getElementsByTagName('h1');
+console.log(document.getElementsByTagName('h1'));
 
 // getElementById() - returns element
-const getId = document.getElementById('get-id');
+console.log(document.getElementById('get-id'));
 
-// getElementByClass() - returns HTML collection (array like object)
-const getClass = document.getElementsByClassName('get-class');
+// getElementByClass() - returns HTMLCollection (array like object)
+console.log(document.getElementsByClassName('get-class'));
 
 // get query like css selector - returns one element
-const getQuery = document.querySelector('nav li');
+console.log(document.querySelector('nav li'));
 
-// get query like css selector - returns all elements in node list
-const getQueryAll = document.querySelectorAll('#nav-id .li-class');
+// get query like css selector - returns all elements in nodeList
+console.log(document.querySelectorAll('#nav-id .li-class'));
 
+// set style to elements (if HTMLCollection or nodeList must use [index])
+document.getElementById('get-id').style.color = 'violet';
+document.getElementsByClassName('li-class')[1].style.color = 'red';
 
-console.log(getQueryAll);
+// HTML attribute
+const titleAttribute = document.getElementById('get-id');
+console.log(titleAttribute.getAttribute('class')); // get attribute
+console.log(titleAttribute.removeAttribute('class')); // remove attribute
+console.log(titleAttribute.setAttribute('class', 'get-class')); // set attribute
+
+// class attributes 
+console.log(titleAttribute.className); // gets class name
+
+console.log(titleAttribute.classList); // returns DOM token list
+titleAttribute.classList.add('random-class');
+console.log(titleAttribute.classList);
+titleAttribute.classList.remove('random-class');
+console.log(titleAttribute.classList);
+
+// get innerHTML - returns HTML elements
+console.log(document.getElementById('nav-id').innerHTML);
+
+// set innerHTML - removes previous HTML elements and set new elements
+document.getElementById('innerHTML-id').innerHTML = `
+<h2>Set by innerHTML</h2>
+<ul>
+  <li>javaScript</li>
+  <li>javaScript</li>
+  <li>javaScript</li>
+  <li>javaScript</li>
+  <li>javaScript</li>
+</ul>
+`;
+
+// get innerText - gets the texts
+console.log(document.getElementById('get-id').innerText);
+
+// set innerText 
+document.getElementById('get-id').innerText='Added by javaScript';
