@@ -25,12 +25,35 @@
       </nav>
     </header>
     <main id="main-container">
-
+      <!-- event -->
+      <section>
+        <h1>javaScript - Events</h1>
+        <!-- option-1 -->
+        <button
+          id="btn-violet"
+          onclick="document.body.style.backgroundColor='violet'"
+        >
+          Make it Violet
+        </button>
+        <!-- option-2 -->
+        <button id="btn-blue" onclick="makeBlue()">Make it Blue</button>
+        <!-- option-3 -->
+        <button id="btn-skyblue">Make it Skyblue</button>
+        <!-- option-4 -->
+        <button id="btn-yellow">Make it Yellow</button>
+      </section>
+      <section>
+        <h1>Using input</h1>
+        <p id="display-text">Display here...</p>
+        <input id="input-field" type="text" placeholder="Write to Display" />
+        <button id="btn-update">Update</button>
+      </section>
     </main>
     <footer></footer>
 
     <!-- javaScript link -->
     <script src="./javaScript/DOM.js"></script>
-    <script src="./javaScript/domManupulation.js"></script>
+    <script src="./javaScript/domManipulation.js"></script>
+    <script src="./javaScript/event.js"></script>
   </body>
 </html>
