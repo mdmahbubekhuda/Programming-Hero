@@ -1,5 +1,5 @@
 // DOM - Document Object Model
-console.log('hello world!');
+console.log('Traversing');
 
 // getElementsByTagName() - returns HTML collection (array like object)
 console.log(document.getElementsByTagName('h1'));
@@ -49,7 +49,7 @@ document.getElementById('innerHTML-id').innerHTML = `
 </ul>
 `;
 
-
+// DOM Traversing
 // parent-child-sibling 
 const getElement = document.getElementById('nav-id');
 console.log(getElement);

@@ -23,10 +23,52 @@ document.getElementById('btn-yellow').addEventListener('click', function () {
 });
 
 // get input text using addEventListener and display text
-document.getElementById('btn-update').addEventListener('click', function () {
-    const getInputValue = document.getElementById('input-field').value;
+document.getElementById('btn-post').addEventListener('click', function () {
+    // get input text
+    const inputValue = document.getElementById('input-field');
+    const inputText = inputValue.value;
     // display input text
-    document.getElementById('display-text').innerText = getInputValue;
+    const displayComment = document.getElementById('comment-container');
+    const newComment = document.createElement('p');
+    newComment.innerText = inputText;
+    displayComment.appendChild(newComment);
     // clear input field
-    document.getElementById('input-field').value = '';
+    inputValue.value = '';
+})
+
+// events capture, target, and bubble 
+const eventBubbleUl = document.querySelector('#event-bubble ul');
+eventBubbleUl.addEventListener('click', function (event) {
+    console.log('ul capture');
+}, { capture: true });
+eventBubbleUl.addEventListener('click', function (event) {
+    console.log('ul bubble');
+});
+
+const liItems = document.querySelectorAll('#event-bubble li');
+for (let liItem of liItems) {
+    liItem.addEventListener('click', function (event) {
+        console.log('li capture');
+    }, { capture: true });
+}
+for (let liItem of liItems) {
+    liItem.addEventListener('click', function (event) {
+        console.log('li bubble');
+        event.stopPropagation(); // or event.stopImmediatePropagation();
+    });
+}
+
+// delegation
+const ul = document.getElementById('list-container');
+ul.addEventListener('click', function (event) {
+    if (event.target.tagName === 'LI') {
+        event.target.remove();
+        event.stopPropagation();
+    }
+})
+
+document.getElementById('btn-add-item').addEventListener('click', function (event) {
+    const li = document.createElement('li');
+    li.innerText = 'New item added';
+    document.getElementById('list-container').appendChild(li);
 })

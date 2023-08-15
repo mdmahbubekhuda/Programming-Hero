@@ -24,10 +24,13 @@
         </ul>
       </nav>
     </header>
+    
     <main id="main-container">
       <!-- event -->
+      <!-- event methods -->
       <section>
         <h1>javaScript - Events</h1>
+        <h2>addEventListener</h2>
         <!-- option-1 -->
         <button
           id="btn-violet"
@@ -42,11 +45,45 @@
         <!-- option-4 -->
         <button id="btn-yellow">Make it Yellow</button>
       </section>
+      <!-- comment section -->
+      <section class="comment-section">
+        <article id="comment-container">
+          <h1>Using input/textarea</h1>
+          <p id="display-text">Display here...</p>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt
+            ipsa excepturi sunt totam quidem unde hic sapiente, minus nulla ab
+            voluptatibus iusto debitis recusandae minima vitae placeat culpa!
+            Aliquam, laudantium?
+          </p>
+        </article>
+        <textarea
+          name=""
+          id="input-field"
+          cols="40"
+          rows="5"
+          placeholder="Write your comment here..."
+        ></textarea>
+        <br />
+        <button id="btn-post">Post</button>
+      </section>
+      <!-- event capture, target, and bubble -->
+      <section id="event-bubble">
+        <ul> Event Bubble
+          <li>Capture</li>
+          <li>Target</li>
+          <li>Bubble</li>
+        </ul>
+      </section>
+      <!-- event delegation -->
       <section>
-        <h1>Using input</h1>
-        <p id="display-text">Display here...</p>
-        <input id="input-field" type="text" placeholder="Write to Display" />
-        <button id="btn-update">Update</button>
+        <h1>Event delegation</h1>
+        <ul id="list-container">
+          <li class="item">Delegation-1</li>
+          <li class="item">Delegation-2</li>
+          <li class="item">Delegation-3</li>
+        </ul>
+        <button id="btn-add-item">Add Item</button>
       </section>
     </main>
     <footer></footer>
