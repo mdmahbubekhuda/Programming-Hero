@@ -5,5 +5,3 @@ document.getElementById('btn-submit').addEventListener('click', function (event)
     // verification 
     (userEmail === 'ronok@rnk.com' && userPassword === 'rnk123') ? window.location.href = 'bank.html' : alert('Incorrect email or password! Please try again...');
 });
-
-// 
