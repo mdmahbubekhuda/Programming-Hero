@@ -1,45 +1,81 @@
-// sum function
-function sum(a, b) {
-    const sum = parseFloat(a) + parseFloat(b);
-    return sum.toFixed(2);
+// // repetition of function  
+// // function getElement by id
+// function getElement(element) {
+//     const selectElement = document.querySelector(element);
+//     const extractElementValue = selectElement.value;
+//     const elementValue = parseFloat(extractElementValue);
+//     selectElement.value = '';
+//     return elementValue;
+// }
+// // function getElement by id
+// function getElement(element) {
+//     const selectElement = document.querySelector(element);
+//     const extractElementValue = selectElement.innerText;
+//     const elementValue = parseFloat(extractElementValue);
+//     return elementValue;
+// }
+
+// DRY - Version (Don't repeat yourself - DRY)
+// function getElement 
+function getElement(element, property) {
+    const selectElement = document.querySelector(element);
+    const extractElementValue = selectElement[property];
+    const elementNumValue = parseFloat(extractElementValue);
+    return elementNumValue;
 }
-// subtraction function
-function subtraction(a, b) {
-    const subtraction = parseFloat(a) - parseFloat(b);
-    return subtraction.toFixed(2);
+
+// function setElement
+function setElement(element, amount) {
+    const selectElement = document.querySelector(element);
+    selectElement.innerText = amount;
 }
 
 // deposit
-document.getElementById('btn-deposit').addEventListener('click', function (event) {
+document.getElementById('btn-deposit').addEventListener('click', function () {
 
-    const selectDepositInput = document.getElementById('deposit-amount');
-    const selectDepositDisplay = document.querySelector('#deposit span');
-    const depositAmount = selectDepositInput.value;
-    const depositDisplayAmount = selectDepositDisplay.innerText;
-    const selectBalanceOutput = document.querySelector('#balance span');
-    const balanceDisplayAmount = selectBalanceOutput.innerText;
+    // get elements
+    const getDepositInput = getElement('#deposit-amount', 'value');
+    const getDepositDisplay = getElement('#deposit span', 'innerText');
+    const getBalanceDisplay = getElement('#balance span', 'innerText');
 
-    selectDepositInput.value = '';
+    // validation
+    if (isNaN(getDepositInput) || getDepositInput < 0) return alert('Please enter correct amount!');
 
-    selectDepositDisplay.innerText = sum(depositAmount, depositDisplayAmount);
-    selectBalanceOutput.innerText = sum(balanceDisplayAmount, depositAmount);
-})
+
+    // calculate amount
+    const calcDeposit = getDepositInput + getDepositDisplay;
+    const calcBalance = getDepositInput + getBalanceDisplay;
+
+    // set display value
+    setElement('#deposit span', calcDeposit);
+    setElement('#balance span', calcBalance);
+
+    // clear input field
+    document.getElementById('deposit-amount').value = '';
+
+});
 
 // withdrawal
-document.getElementById('btn-withdraw').addEventListener('click', function (event) {
-    const selectWithdrawInput = document.getElementById('withdraw-amount');
-    const selectWithdrawDisplay = document.querySelector('#withdraw span');
-    const withdrawAmount = selectWithdrawInput.value;
-    const withdrawDisplayAmount = selectWithdrawDisplay.innerText;
-    const selectBalanceOutput = document.querySelector('#balance span');
-    const balanceDisplayAmount = selectBalanceOutput.innerText;
+document.getElementById('btn-withdraw').addEventListener('click', function () {
 
-    selectWithdrawInput.value = '';
+    // get elements
+    const getWithdrawInput = getElement('#withdraw-amount', 'value');
+    const getWithdrawDisplay = getElement('#withdraw span', 'innerText');
+    const getBalanceDisplay = getElement('#balance span', 'innerText');
 
-    if (withdrawAmount > parseFloat(balanceDisplayAmount)) {
-        return alert('Insufficient balance');
-    }
+    // clear input field
+    document.getElementById('withdraw-amount').value = '';
 
-    selectWithdrawDisplay.innerText = sum(withdrawAmount, withdrawDisplayAmount);
-    selectBalanceOutput.innerText = subtraction(balanceDisplayAmount, withdrawAmount);
-})
+    // validation
+    if (isNaN(getWithdrawInput) || getWithdrawInput < 0) return alert('Please enter correct amount!');
+    if (getWithdrawInput > getBalanceDisplay) return alert('Insufficient Balance!!!');
+
+    // calculate amount
+    const calcWithdraw = getWithdrawInput + getWithdrawDisplay;
+    const calcBalance = getBalanceDisplay - getWithdrawInput;
+
+    // set display value
+    setElement('#withdraw span', calcWithdraw);
+    setElement('#balance span', calcBalance);
+
+});
