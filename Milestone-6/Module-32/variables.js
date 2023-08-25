@@ -5,6 +5,7 @@
 const number = 123
 const string = 'string'
 const boolean = true // or false
+// trivial data type
 const specialTypeI = undefined
 const specialTypeII = null // typeof null is object - javaScript creator's mistake
 // non-primitive data types
