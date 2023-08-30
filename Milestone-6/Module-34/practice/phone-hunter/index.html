@@ -15,9 +15,9 @@
     <script src="./main.js" defer></script>
   </head>
   <body>
-    <section class="space-y-8">
+    <section id="search-container" class="space-y-8">
       <!-- search phones -->
-      <article id="search-container" class="text-center space-y-8">
+      <article class="text-center space-y-8">
         <h1 class="text-4xl mt-8">Search Your Phone</h1>
         <div>
           <input
@@ -38,11 +38,23 @@
           </button>
         </div>
       </article>
+      <!-- loading - spinner -->
+      <article id="loading-spinner" class="text-center mt-8 hidden">
+        <span class="loading loading-dots loading-md"></span>
+      </article>
       <!-- display phones -->
       <article
         id="phone-container"
         class="grid gap-4 grid-cols-3 place-content-center place-items-center"
       ></article>
+      <!-- display phone details - modal -->
+      <article>
+        <dialog id="phone_details" class="modal">
+          <form method="dialog" class="modal-box">
+            <div id="modal-container"></div>
+          </form>
+        </dialog>
+      </article>
     </section>
   </body>
 </html>
