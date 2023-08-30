@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Phone Hunter</title>
+    <!-- CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.6.3/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- javaScript -->
+    <script src="./main.js" defer></script>
+  </head>
+  <body>
+    <section class="space-y-8">
+      <!-- search phones -->
+      <article id="search-container" class="text-center space-y-8">
+        <h1 class="text-4xl mt-8">Search Your Phone</h1>
+        <div>
+          <input
+            id="search-input"
+            type="text"
+            placeholder="Type here"
+            class="input input-bordered w-full max-w-xs"
+          />
+          <button id="btn-search" class="btn btn-neutral ml-4 align-top">
+            Search
+          </button>
+          <button
+            id="btn-show-all"
+            class="btn btn-neutral ml-4 align-top"
+            hidden
+          >
+            Show All
+          </button>
+        </div>
+      </article>
+      <!-- display phones -->
+      <article
+        id="phone-container"
+        class="grid gap-4 grid-cols-3 place-content-center place-items-center"
+      ></article>
+    </section>
+  </body>
+</html>
