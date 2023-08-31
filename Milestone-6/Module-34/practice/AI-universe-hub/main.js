@@ -22,9 +22,23 @@ const displayData = (data, btnId) => {
 
     data.forEach(card => {
         const div = document.createElement('div')
+        const feature = card.features.map((item, index) => `${index + 1}. ${item} <br/>`).join('')
+
         div.innerHTML = `
-        ${card.name}
-        ${card.published_in}
+        <div class="card w-96 bg-base-100 shadow-xl mb-8">
+            <figure><img class="w-full h-[200px]" src="${card.image}" /></figure>
+            <div class="card-body">
+                <h2 class="card-title">Features</h2>
+                ${feature}
+                <hr />
+                <h1 class="card-title">${card.name}</h1>
+                <div class="flex">
+                    <img src="Frame.svg" alt="">
+                    ${card.published_in}
+                    <button class="ml-auto"onclick="details_modal.showModal()"><img src="Frame1.svg" alt=""></button>
+                </div>
+            </div>
+        </div>
         `
         displayContainer.appendChild(div)
     })

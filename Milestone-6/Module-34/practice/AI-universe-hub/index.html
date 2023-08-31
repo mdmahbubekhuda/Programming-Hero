@@ -24,10 +24,22 @@
           class="grid grid-cols-3 gap-4 justify-items-center"
         ></div>
         <div class="text-center my-8">
-          <button id="btn-show-all" class="btn btn-neutral">
-            Show All
-          </button>
+          <button id="btn-show-all" class="btn btn-neutral">Show All</button>
         </div>
+      </section>
+      <!-- Modal -->
+      <section>
+        <dialog id="details_modal" class="modal">
+          <form method="dialog" class="modal-box">
+            <button
+              class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
+            >
+              ✕
+            </button>
+            <h3 class="font-bold text-lg">Hello!</h3>
+            <p class="py-4">Press ESC key or click on ✕ button to close</p>
+          </form>
+        </dialog>
       </section>
     </main>
   </body>
